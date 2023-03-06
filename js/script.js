@@ -44,6 +44,7 @@ const calculateSavings = () => {
 //   Validate saving percentage value
   if (savePercentage < 0) {
     alert("Provide positive saving value");
+    return false;
   }
   const income = document.querySelector("#income").value;
   const savingAmount = (savePercentage / 100) * income;
