@@ -2,7 +2,7 @@ const calculateExpense = () => {
   const income = document.querySelector("#income").value;
   const food = document.querySelector("#food").value;
   const rent = document.querySelector("#rent").value;
-  const clothes = document.querySelectorAll("clothes").value;
+  const clothes = document.querySelector("#clothes").value;
 
   if (
     income < 0 ||
@@ -20,15 +20,20 @@ const calculateExpense = () => {
   // calculate expense
   const expense =
     parseInt(food) + parseInt(rent) + parseInt(clothes);
+   
 
   // calculate balance
-  const balance = parseInt(income.value) - expense;
+  const balance = parseInt(income) - expense;
   //   validate income
   if (expense > income.value) {
     alert("Expenses cannot be more than income");
   } else {
     // view total expense and balance
+
+    
     document.getElementById("total-expense").innerText = expense;
+
+    
     document.getElementById("balance").innerText = balance;
   }
 };
@@ -52,6 +57,6 @@ const calculateSavings = () => {
   } else {
     // view saving amount and remaining balance
     document.getElementById("saving-amount").innerText = savingAmount;
-    document.getElementById("remaining-balance").innerText = remainingBalance;
+    document.getElementById("remaining-balance").innerText =remainingBalance;
   }
 };
